@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the thesis work on **Photoplethysmography (PPG) Signal Processing for Glucose Level Prediction** using advanced machine learning techniques combined with signal decomposition methods. The project explores the relationship between PPG signals and blood glucose levels using Empirical Mode Decomposition (EMD) and Intrinsic Mode Functions (IMF) for feature extraction.
+This repository contains thesis work on **Photoplethysmography (PPG) Signal Processing for Glucose Level Prediction** using advanced machine learning techniques combined with signal decomposition methods. The project explores the relationship between PPG signals and blood glucose levels using Empirical Mode Decomposition (EMD) and Intrinsic Mode Functions (IMF) for feature extraction.
 
 ## Project Objectives
 
@@ -14,15 +14,17 @@ This repository contains the thesis work on **Photoplethysmography (PPG) Signal 
 ## Repository Structure
 
 ```
-HbA1c-PPG-Glucose-ML/
+PPG-Glucose-ML-EMD-IMF/
 ├── Model/                           # Trained models directory
-├── trail/                           # Experimental trials and variations
+├── trials/                          # Experimental trials and variations
 ├── README.md                        # This file
-├── LICENSE                          # LGPL v2.1 License
+├── LICENSE                          # MIT License
 └── Visualization outputs/           # Generated plots and results
     ├── CB.png, CE_CB.png, CE_RF.png
     ├── LGB.png, RF.png, XGB.png
-    └── Other analysis visualizations
+    ├── top30imf.png, top50imf.png, top30_imf+general.png
+    ├── Red_imf.png, org+sumIMF.png
+    └── output.png, output2.png, output3.png, output4.png, output5.png
 ```
 
 ## Dataset
@@ -31,6 +33,8 @@ The project utilizes PPG signal data along with corresponding glucose measuremen
 - Raw PPG signal samples
 - Preprocessed signal data
 - Corresponding glucose level annotations
+
+**Note:** Data is restricted and not included in the repository.
 
 ## Methodology
 
@@ -98,15 +102,15 @@ pip install numpy pandas scikit-learn lightgbm xgboost catboost matplotlib seabo
    ```bash
    jupyter notebook
    ```
-4. Open `PPG_Glucose_FINAL.ipynb` to view the complete analysis
+4. Open the main notebook file to view the complete analysis
 5. Run the cells sequentially to reproduce results
 
 ## Experimental Trials
 
-The `trail/` directory contains multiple experimental iterations including:
-- Trail #1: Initial model implementations
-- Trail #2: Variations with different feature sets (copies 1-2)
-- Trail #3: Optimized ensemble methods and final implementations (copies 1-7)
+The `trials/` directory contains multiple experimental iterations including:
+- Trial #1: Initial model implementations
+- Trial #2: Variations with different feature sets (copies 1-2)
+- Trial #3: Optimized ensemble methods and final implementations (copies 1-7)
 
 Each trial represents an iterative refinement of the approach and hyperparameter tuning.
 
@@ -120,8 +124,8 @@ The repository includes comprehensive visualization outputs showing:
 - **Signal Decomposition**: Red_imf.png, org+sumIMF.png
 - **Prediction Results**: output.png, output2.png, output3.png, output4.png, output5.png
 
-
 ### Model Performance Comparisons
+
 The repository includes comprehensive visualization outputs showing model performance, feature analysis, and signal decomposition:
 
 #### CatBoost Performance
@@ -182,7 +186,7 @@ The repository includes comprehensive visualization outputs showing model perfor
 
 ## License
 
-This project is licensed under the **MIT**. See the `LICENSE` file for more details.
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
 ## Author
 
@@ -195,8 +199,3 @@ This project is licensed under the **MIT**. See the `LICENSE` file for more deta
 ## Contact & Contributions
 
 For questions, suggestions, or contributions related to this thesis work, please contact shamasatter@gmail.com or reach out through the repository's issue tracker.
-
----
-
-**Last Updated:** 2025-11-23 19:05:06 UTC  
-**Repository Status:** Active Research Project
