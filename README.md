@@ -15,8 +15,6 @@ This repository contains the thesis work on **Photoplethysmography (PPG) Signal 
 
 ```
 KMU-Thesis-SS/
-├── PPG_Glucose_FINAL.ipynb          # Final thesis implementation notebook
-├── Data/                            # Dataset directory
 ├── Model/                           # Trained models directory
 ├── trail/                           # Experimental trials and variations
 ├── README.md                        # This file
